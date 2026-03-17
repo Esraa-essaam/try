@@ -1,8 +1,8 @@
 const Recipes = require("../models/recipe")
 
 const getRecipes= async (req,res)=>{
-    res.json({msg:"hello"})
-
+    const recipes =await Recipes.find(req.body)
+    return res.json(recipes)
 }
 const getRecipe= async (req,res)=>{
     res.json({msg:"hello"})
