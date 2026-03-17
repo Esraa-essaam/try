@@ -2,11 +2,11 @@
 require("dotenv").config()
 const express = require("express");
 const app = express();
-// const connectDb = require("connectDb")
+const connectDb = require("./config/connectionDb")
 // app.use(express.json())
 
 const PORT = process.env.PORT || 3000;
-
+connectDb()
 
 // i don't know exactly what this func do ?
 // i took it to the router but i don't know why i did it 
