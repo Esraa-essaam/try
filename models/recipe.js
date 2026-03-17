@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 
 const recipeSchema = mongoose.Schema({
-    titel:{
+    title:{
         type:String,
         required:true,
         unique:true
@@ -10,17 +10,16 @@ const recipeSchema = mongoose.Schema({
         type:String,
         required:true,
     },
-    istructions:{
+    instructions:{
         type:String,
         required:true,
     },
-    description:{
+    time:{
         type:String,
         required:true,
     },
     coverimage:{
         type:String,
-        required:true,
     },
 
 },{timestamps:true})

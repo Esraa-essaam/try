@@ -9,19 +9,17 @@ const getRecipe= async (req,res)=>{
 
 }
 const addRecipe= async (req,res)=>{
-    try{
-        const {title,ingredients,istructions,time}=req.body
-        if (!title||!ingredients||!istructions ||!time){
-            res.json({msg:"required field can't be empty"})
+    
+        const {title,ingredients,instructions,time}=req.body
+        if (!title||!ingredients||!instructions ||!time){
+           return res.json({msg:"required field can't be empty"})
         } 
         const newRecipe =await Recipes.create({
-           title,ingredients,istructions,time 
+           title,ingredients,instructions,time 
         })
         return res.json(newRecipe)
-    }
-    catch(error){
-
-    }
+    
+   
 }
 const editRecipe= async (req,res)=>{
     res.json({msg:"hello"})

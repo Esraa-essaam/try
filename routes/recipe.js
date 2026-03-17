@@ -18,4 +18,4 @@ router.delete("/:id",deleteRecipe)//delete specific recipes
 
 
 //export route
-module.export = router
+module.exports = router;
